@@ -50,16 +50,18 @@ const quotes = [{
 
 ];
 
-let quotePara = document.querySelector(".randomQuotes");
-console.log(quotePara);
-let authorPara = document.querySelector(".randomAuthor");
+function generate() {
+    let quotePara = document.querySelector(".randomQuotes");
+    console.log(quotePara);
+    let authorPara = document.querySelector(".randomAuthor");
 
-let quoteArr = Math.floor(Math.random() * quotes.length);
-console.log(quoteArr);
+    let quoteArr = Math.floor(Math.random() * quotes.length);
+    console.log(quoteArr);
 
-let quoteGenerator = quotes[quoteArr];
-console.log(quoteGenerator.quote);
+    let quoteGenerator = quotes[quoteArr];
+    console.log(quoteGenerator.quote);
 
-quotePara.innerHTML = quoteGenerator.quote;
-authorPara.innerHTML = quoteGenerator.author;
-console.log(quoteGenerator.author);
+    quotePara.innerHTML = quoteGenerator.quote;
+    authorPara.innerHTML = quoteGenerator.author;
+    console.log(quoteGenerator.author);
+}
